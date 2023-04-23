@@ -38,16 +38,16 @@ const options = {
         }
     },
 };
-
+// використовуємо функціонал бібліотеки 
 const dates = flatpickr(input, options);
-
+// функція початку відліку
 function startTimer() {
 
     const selectedDate = dates.selectedDates[0];
 
     intervalId = setInterval(() => {
-        const currentTime = Date.now();
-        const deltaTime = selectedDate - currentTime;
+        const currentTime = Date.now(); // поточна дата
+        const deltaTime = selectedDate - currentTime; //зворотній відлік
         const time = convertMs(deltaTime);
         startBtn.disabled = true;
 
